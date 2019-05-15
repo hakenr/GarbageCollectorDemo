@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Haken.GCRoots
 {
-	class Program
+	public class Program
 	{
 		private static MyClass staticField;
 
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
 			MyClass localVariable = new MyClass(1, "první instance do localVariable - opustí se");
 			

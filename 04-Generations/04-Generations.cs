@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Haken.Generations
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
 			string localStringVariable1 = "první string";
 

@@ -9,7 +9,7 @@ namespace Haken.UnmanagedResources
 
 	// http://knowledge-base.havit.cz/2006/11/11/idisposable-resourcewrapper-design-pattern/
 
-	class ResourceWrapperPattern : IDisposable
+	public class ResourceWrapperPattern : IDisposable
 	{
 		// Indikuje, zdali byl objekt již uklizen.
 		private bool disposed = false;

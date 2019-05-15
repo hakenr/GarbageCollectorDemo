@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Haken.UnmanagedResources
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
 			Console.WriteLine("Start aplikace.\nAktuální spotřeba {0:n0} kB (managed {1:n0} kB).\n", Process.GetCurrentProcess().WorkingSet64 / 1024, GC.GetTotalMemory(false) / 1024);
 			Console.ReadKey();

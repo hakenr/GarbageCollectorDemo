@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Haken.SimpleGarbageCollection
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
 			const int count = 1000;
 

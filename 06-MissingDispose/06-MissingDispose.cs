@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Haken.MissingDispose
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
 			var bitmap1 = new Bitmap(4096, 4096);
 			var bitmap2 = new Bitmap(4096, 4096);
