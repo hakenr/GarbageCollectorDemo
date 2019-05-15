@@ -20,7 +20,8 @@ namespace Haken.UnmanagedResources
 			Console.WriteLine("new Bitmap(4096,4096);\nAktuální spotřeba {0:n0} kB (managed {1:n0} kB).\n", Process.GetCurrentProcess().WorkingSet64 / 1024, GC.GetTotalMemory(false) / 1024);
 			Console.ReadKey();
 
-			//bitmap.Dispose();  // správně using (..) { ... }
+			// TODO zkusit bez Dispose
+			bitmap.Dispose();  // správně using (..) { ... }
 
 			Console.WriteLine("bitmap.Dispose();\nAktuální spotřeba {0:n0} kB (managed {1:n0} kB).\n", Process.GetCurrentProcess().WorkingSet64 / 1024, GC.GetTotalMemory(false) / 1024);
 			Console.ReadKey();
@@ -28,7 +29,7 @@ namespace Haken.UnmanagedResources
 			bitmap = null;
 			GC.Collect();
 
-			Console.WriteLine("bitmap = null; GC.Collect();\nAktuální spotřeba {0:n0} kB (managed {1:n0} kB).", Process.GetCurrentProcess().WorkingSet64 / 1024, GC.GetTotalMemory(false) / 1024);
+			Console.WriteLine("bitmap = null; GC.Collect();\nAktuální spotřeba {0:n0} kB (managed {1:n0} kB).\n", Process.GetCurrentProcess().WorkingSet64 / 1024, GC.GetTotalMemory(false) / 1024);
 			Console.ReadKey();
 
 			GC.WaitForPendingFinalizers();
